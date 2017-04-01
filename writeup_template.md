@@ -19,11 +19,11 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/SignPics.png "Visualization"
 [image2]: ./examples/BarGraph.png "Visualiztation"
-[image4]: ./MyGermanSigns/30kmh1.png "Traffic Sign 1"
-[image5]: ./MyGermanSigns/RightOfWay11.png "Traffic Sign 2"
-[image6]: ./MyGermanSigns/Stop14.png "Traffic Sign 3"
-[image7]: ./MyGermanSigns/EndOfSpeed32.png "Traffic Sign 4"
-[image8]: ./MyGermanSigns/RoundAbout40.png "Traffic Sign 5"
+[image4]: ./MyGermanSigns/30kmh1.jpg "Traffic Sign 1"
+[image5]: ./MyGermanSigns/RightOfWay11.jpg "Traffic Sign 2"
+[image6]: ./MyGermanSigns/Stop14.jpg "Traffic Sign 3"
+[image7]: ./MyGermanSigns/EndOfSpeed32.jpg "Traffic Sign 4"
+[image8]: ./MyGermanSigns/RoundAbout40.jpg "Traffic Sign 5"
 
 ## Rubric Points
 I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -136,31 +136,34 @@ Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image4] 
+![alt text][image5] 
+![alt text][image6] 
+![alt text][image7]
+![alt text][image8]
 
-The first image might be difficult to classify because ...
+I was actually worried about the last two images the most, which proved to be correct. My training data had very few examples of these two signs compared to that of the other three. I could/should have fixed this by augmenting the data.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 8-11 cells of the Ipython notebook.
 
-Here are the results of the prediction:
+Here are the results of the predictions:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| 30 kmh      		| 30 kmh    									| 
+| Right of Way     			| Right of Way  										|
+| Stop				| Stop											|
+| End of Speed      		| General caution					 				|
+| Round About			| Children crossing     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares horribly to the accuracy on the test set of 93.1%. Like I stated above, this is probably because the two problematic signs did not show up in the training data enough times. My misses, were beyond bad misses. The signs don't look anything close to one another.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 12th cell of the Ipython notebook.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
