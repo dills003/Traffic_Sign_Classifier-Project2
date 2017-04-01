@@ -19,12 +19,11 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/SignPics.png "Visualization"
 [image2]: ./examples/BarGraph.png "Visualiztation"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./MyGermanSigns/30kmh1.png "Traffic Sign 1"
+[image5]: ./MyGermanSigns/RightOfWay11.png "Traffic Sign 2"
+[image6]: ./MyGermanSigns/Stop14.png "Traffic Sign 3"
+[image7]: ./MyGermanSigns/EndOfSpeed32.png "Traffic Sign 4"
+[image8]: ./MyGermanSigns/RoundAbout40.png "Traffic Sign 5"
 
 ## Rubric Points
 I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -114,28 +113,26 @@ To train the model, I used the following parameters:
 The code for calculating the accuracy of the model is located in the seventh cell of the Ipython notebook.
 
 My final model results were:
+
 | Set         		|     Accuracy  					| 
 |:---------------------:|:---------------------------------------------:| 
 | Validation        		| 0.95   							| 
 | Test     	| 0.931 	|
 
+I chose to basically copy what we did in the LeNet lab for the course. I chose that architecture because, it seemed to work well. I altered the second convolution layer to include a relu instead of a sigmoid activation function. I did this because, the TensorFlow labs used relus wherever a convolution was used. I feel like Udacity and TensorFlow are much better architecture creators than I at this point. I also changed the output sizes from some of the layers, it just felt like a smoother trasistion from layer to layer.
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+I had planned to use dropouts, because I think the idea is really interesting, but shrinking my batch sizes down pretty much did the same thing. This was due to the fact that the labels were so unevenly represented in the training data.
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+My validation numbers were better than my test, which could suggest a tiny bit of overfitting. Dropout could possibly help this. 
+
+The biggest thing that I learned, is that there is a bunch of knobs that are available to tweak. Epochs, batch sizes, number of layers, types of layers, layer size, pooling, dropout, activations, learning, and how data is presented are all adjusments that can be made to improve the model. Getting good at this is going to take some effort. I come from PID land and three knobs can be quite the chore somethings, deep learning is something else.
+
+Also, if I were to do this again, I would agument my data. Training needs as many examples as possible and it makes sense to have each type of example have the same number of examples.
  
 
-###Test a Model on New Images
+Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
