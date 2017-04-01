@@ -187,13 +187,23 @@ For the second image, the model is very sure that this is a Right-of-Way sign (p
 | .0003				    | Roundabout mandatory      							|
 
 
-For the second image, the model is very sure that this is a Right-of-Way sign (probability of 0.993), and the image does contain a Right-of-Way sign. The top five soft max probabilities were:
+For the third image, the model is pretty sure that this is a Stop sign (probability of 0.687), and the image does contain a Stop sign. The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .993         			| Right-of-way   									| 
-| .004     				| Beware of ice/snow									|
-| .001					| Double curve								|
-| .0005	      			| Pedestrians				 				|
-| .0003				    | Roundabout mandatory      							|
+| .687         			| Stop   									| 
+| .146     				| Yield									|
+| .045					| Turn left ahead								|
+| .023	      			| No passing 				 				|
+| .016				    | Speed limit (80km/h)     							|
 
+
+For the fourth image, the wheels fell off for me. The model is not sure what sign this is. The best guess was a General Caution sign (.238) and the image does not contain a General Caution sign. The images is actually of a End of Speed sign. And it gets worse, the correct sign does not appear on the top five list. The top five soft max probabilities were:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .238         			| General caution   									| 
+| .171     				| Road work								|
+| .116					| Priority road								|
+| .094	      			| End of no passing				 				|
+| .090				    | Dangerous curve to the right     							|
