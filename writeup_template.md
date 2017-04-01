@@ -156,7 +156,7 @@ Here are the results of the predictions:
 | Right of Way     			| Right of Way  										|
 | Stop				| Stop											|
 | End of Speed      		| General caution					 				|
-| Round About			| Children crossing     							|
+| Roundabout	Mandatory		| Children crossing     							|
 
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares horribly to the accuracy on the test set of 93.1%. Like I stated above, this is probably because the two problematic signs did not show up in the training data enough times. My misses, were beyond bad misses. The signs don't look anything close to one another.
@@ -165,15 +165,35 @@ The model was able to correctly guess 3 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 12th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is very sure that this is a 30 kmh sign (probability of 0.988), and the image does contain a 30 kmh sign. The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .988         			| Speed limit (30km/h)   									| 
+| .003     				| Speed limit (20km/h) 										|
+| .003					| Speed limit (80km/h)										|
+| .002	      			| Speed limit (50km/h)				 				|
+| .001				    | Roundabout mandatory      							|
 
 
-For the second image ... 
+For the second image, the model is very sure that this is a Right-of-Way sign (probability of 0.993), and the image does contain a Right-of-Way sign. The top five soft max probabilities were:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .993         			| Right-of-way   									| 
+| .004     				| Beware of ice/snow									|
+| .001					| Double curve								|
+| .0005	      			| Pedestrians				 				|
+| .0003				    | Roundabout mandatory      							|
+
+
+For the second image, the model is very sure that this is a Right-of-Way sign (probability of 0.993), and the image does contain a Right-of-Way sign. The top five soft max probabilities were:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .993         			| Right-of-way   									| 
+| .004     				| Beware of ice/snow									|
+| .001					| Double curve								|
+| .0005	      			| Pedestrians				 				|
+| .0003				    | Roundabout mandatory      							|
+
