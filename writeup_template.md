@@ -207,3 +207,14 @@ For the fourth image, the wheels fell off for me. The model is not sure what sig
 | .116					| Priority road								|
 | .094	      			| End of no passing				 				|
 | .090				    | Dangerous curve to the right     							|
+
+
+For the fifth and final image, the troubles continue. The model is not sure what sign this is. The best guess was a Children Crossing sign (.144) and the image does not contain a Children sign. The images is actually of a Roundabout sign. And it gets worse, the correct sign does not appear on the top five list once again. The top five soft max probabilities were:
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .144         			| Children crossing   									| 
+| .143     				| Priority road							|
+| .111					| Right-of-way							|
+| .089	      			| End of all speed and passing limits			 				|
+| .081				    | Speed limit (60km/h)   							|
