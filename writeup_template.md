@@ -32,6 +32,7 @@ I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/vi
 ---
 *Writeup / README*
 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf.
+
 Here is a link to my [project code](https://github.com/dills003/Traffic_Sign_Classifier-Project2/blob/master/P2.ipynb)
 
 *Data Set Summary & Exploration*
@@ -69,21 +70,29 @@ I originally normalized the data after grayscaling it, but the results were less
 
 I didn't split up the data, the data came with validation files, so that was nice. 
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for my final model is located in the seventh cell of the ipython notebook. 
+The code for my final model is located in the fifth cell of the ipython notebook. I used the LeNet-5 model from our lab. I altered the second convulution activation from a sigmoid to a relu. I did this because that is what the TensorFlow labs have you do. I also altered the output and input sizes to my layers.
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 grayscaled image   							| 
+| Convolution #1     	| 1x1 stride, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| Convolution #2	    | 1x1 stride, outputs 10x10x16      									|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
+| Flatten	      	| outputs 400x1 				|
+| Fully connected #1		| outputs 200x1        									|
+| Sigmoid					|												|
+| Fully connected #2	| outputs 43x1        									|
+| Softmax	w/ Cross Entropy w/Logits			|         									|
+| Loss Operation			|  Reduce Mean       									|
+| Optimizer			| Adam Optimizer       									|
+| Training Operation			|  Minimize       									|
 |						|												|
 |						|												|
  
