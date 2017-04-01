@@ -17,8 +17,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./SignPics.jpg "Visualization"
-[image2]: ./BarGraph.jpg "Visualiztation"
+[image1]: ./examples/SignPics.png "Visualization"
+[image2]: ./examples/BarGraph.png "Visualiztation"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
@@ -53,6 +53,7 @@ The code for this step is contained in the third code cell of the IPython notebo
 Here is an exploratory visualization of the data set. I displayed all of the images that we would be trying to classify and also a bar graph showing how many of each sign we had to train with
 
 ![alt text][image1]
+![alt text][image2]
 
 ###Design and Test a Model Architecture
 
