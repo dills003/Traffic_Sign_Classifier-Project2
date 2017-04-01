@@ -93,25 +93,32 @@ My final model consisted of the following layers:
 | Loss Operation			|  Reduce Mean       									|
 | Optimizer			| Adam Optimizer       									|
 | Training Operation			|  Minimize       									|
-|						|												|
-|						|												|
  
 
 
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is located in the eigth cell of the ipython notebook. 
+The code for training the model is located in the sixth cell of the ipython notebook. I thought using small batch sizes would offset the fact that we have an unever distribution of training example label/pictures.
 
-To train the model, I used an ....
+To train the model, I used the following parameters:
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+| Parameter         		|     Value        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Epochs        		| 10   							| 
+| Batch Size     	| 150 	|
+| Learning Rate					|	0.001											|
 
-The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
+
+5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+
+The code for calculating the accuracy of the model is located in the seventh cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+| Set         		|     Accuracy  					| 
+|:---------------------:|:---------------------------------------------:| 
+| Validation        		| 0.95   							| 
+| Test     	| 0.931 	|
+
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
